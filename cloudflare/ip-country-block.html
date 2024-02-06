@@ -79,6 +79,7 @@
         }
         .content-cloudflare * {
             font-size: 14px;
+            color: white;
             opacity: 0.7;
             margin: 0;
             padding: 1px 0;
@@ -86,8 +87,18 @@
         .content-cloudflare ul {
             list-style: none;
             display: flex;
-            justify-content: center;
+            justify-content: center;            
+            flex-wrap: wrap;
             gap: 8px;
+        }
+        
+        @media screen and (max-width: 991px){
+            .content h1 {
+                font-size: 40px;
+            }
+            .content h1::before {
+                font-size: 100px;
+            }
         }
     </style>
     <body>
