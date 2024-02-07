@@ -1,127 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Teste de segurança - Astron Members</title>
-		<meta name="description" content="Erro interno detectado">
-		<meta name="author" content="RocksBrasil - www.rocksbrasil.com.br">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
-		<!-- metatags -->
-		<base href="http://central.astronmembers.com.br/">
-        
-		<!-- fontes -->
-		<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400i,700,700i,900" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<html>
+ <head>
+   <meta charset="utf-8">
+    <title>Teste de segurança - Astron Members</title>
     
-        <!-- FAVICON -->
-        <link rel="apple-touch-icon" sizes="180x180" href="https://rocksbrasil.github.io/astron-error-pages/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://rocksbrasil.github.io/astron-error-pages/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https://rocksbrasil.github.io/astron-error-pages/favicon/favicon-16x16.png">
-        <link rel="manifest" href="https://rocksbrasil.github.io/astron-error-pages/favicon/site.webmanifest">
-        <link rel="mask-icon" href="https://rocksbrasil.github.io/astron-error-pages/favicon/safari-pinned-tab.svg" color="#514a4c">
-        <link rel="shortcut icon" href="https://rocksbrasil.github.io/astron-error-pages/favicon/favicon.ico">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-config" content="https://rocksbrasil.github.io/astron-error-pages/favicon/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
-    </head>
-    <!-- Estilos página -->
-    <style>
-        * {
-            font-family: 'Nunito Sans';
-            box-sizing: border-box;
-        }
-        body {
-            background: #141414;
-            color: white;
-            text-align: center;
-            min-height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            overflow: hidden;
-            padding: 10px;
-            background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 8px);
-            background-size: 4px 4px;
-            margin: 0;
-        }
-        .content h1 {
-            font-size: 50px;
-            font-weight: 700;
-            color: #fff;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .content h1::before {
-            position: absolute;
-            top: -35px;
-            font-size: 120px;
-            color: #333;
-            content: attr(data-shadow-text);
-            font-weight: 900;
-            font-style: italic;
-            z-index: -1;
-            white-space: nowrap;
-            text-align: center;
-        }
-        .content svg {
-            width: 50px;
-            height: 50px;
-        }
+    <!-- fontes -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400i,700,700i,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Nunito Sans';
+        box-sizing: border-box;
+        color: white;
+    }
+    body {
+        background: #141414;
+        color: white;
+        text-align: center;
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        padding: 10px;
+        background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 8px);
+        background-size: 4px 4px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .language-text {            
-            opacity: 0.7;
-            line-height: 5px;
-        }
-        h1 .language-text {
-            font-size: 22px;
-        }
-        
-        .content .content-cloudflare {
-            padding-top: 20px;
-        }
-        .content .content-cloudflare h1, .content .content-cloudflare h2 {
-            display: none;
-        }
-        .content .content-cloudflare .footer {
-            opacity: 0.5;
-            font-size: 12px;
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            text-align: center;
-            width: 100%;
-        }
-        
-        @media screen and (max-width: 991px){
-            .content h1 {
-                font-size: 40px;
-            }
-            .content h1::before {
-                font-size: 100px;
-            }
-        }
-    </style>
-    <body>
-        <div class="content">
-            <svg width="225" height="144" viewBox="0 0 225 144" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M107.033 120.306C99.9211 125.314 106.299 120.62 94.5331 128.959C104 128.865 97.7365 128.959 110.765 128.959C115.117 129.126 119.476 128.939 123.799 128.399C123.799 127.38 117.374 114.113 116.849 114.113C116.584 114.115 111.879 117.171 107.033 120.306Z" fill="#DE4141"/><path d="M33.9911 70.6931C15.9252 109.657 0.811295 142.221 0.378052 143.15C-0.576551 145.191 -1.70555 145.655 24.0026 132.851C34.2518 127.749 53.2722 118.379 66.1282 111.971C79.0704 105.662 114.776 87.9436 145.603 72.6339C176.429 57.3241 207.011 42.2044 213.526 38.9568C220.135 35.7091 225.426 32.9257 225.251 32.8344C225.077 32.6479 201.278 41.7402 182.518 49.1621C180.174 50.0942 169.576 54.2647 159.066 58.2543C142.476 64.7478 109.731 77.4568 106.866 78.5754C106.258 78.7619 102.697 72.5443 98.7022 64.2891C78.4627 22.9143 67.2517 0 67.0846 0C66.9965 0 52.0569 31.8221 33.9911 70.6931ZM75.6834 64.0132C81.2421 75.8889 84.0215 82.8428 83.5001 83.4021C82.2848 84.6083 46.4174 99.3588 45.8906 98.8033C45.3692 98.3391 65.8675 45.4595 66.5632 45.4595C66.8239 45.4577 70.9067 53.8079 75.6834 64.0132Z" fill="#DE4141"/></svg>
-            <h1>
-                Você é um robô?
-                <span class="language-text">You are a robot?</span>
-            </h1>
-            <p>
-                Complete o desafio abaixo para confirmar a sua identidade <br>
-                <span class="language-text">Please fill in the challenge below to confirm your identity</span>
-            </p>
-            <div class="content-cloudflare">
-                ::CAPTCHA_BOX::
-            </div>
-        </div>
-    </body>
+    .content h1 {
+        font-size: 50px;
+        line-height: 36px;
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+    }
+
+    .language-text {            
+        opacity: 0.7;
+        line-height: 5px;
+    }
+    h1 .language-text {
+        font-size: 22px;
+    }
+
+    .main-wrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+</style>
+<body>
+    <div class="content">
+        <h1>
+          Você é um robô? <br> 
+          <span class="language-text">Are you a robot?</span>
+        </h1>        
+        <p>
+            Complete o desafio abaixo para confirmar a sua identidade <br>
+            <span class="language-text">Please fill in the challenge below to confirm your identity</span>
+        </p>
+        <h2>::CAPTCHA_BOX::</h2>
+    </div>
+</body>
 </html>
