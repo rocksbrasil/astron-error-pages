@@ -16,30 +16,22 @@
     }
     body {
         background: #141414;
+        color: white;
+        text-align: center;
         min-height: 100vh;
         width: 100%;
         overflow: hidden;
         padding: 10px;
-        /* background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 8px); */
+        background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 8px);
         background-size: 4px 4px;
         margin: 0;
     }
-
-    .box-page {
-        margin: 0 auto;
-        border-radius: 30px;
-        background: #262626;
-        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.03);
-        width: 480px;
-        max-width: 80vw;
-        min-height: 300px;
-        padding: 30px;
-    }
-    .box-page h1 {
+    .content h1 {
+        font-size: 50px;
+        line-height: 36px;
         font-weight: 700;
         color: #fff;
-        text-align: center;
-        margin: 0;
+        position: relative;
     }
 
     .language-text {            
@@ -49,13 +41,26 @@
     h1 .language-text {
         font-size: 22px;
     }
+    
+    @media screen and (max-width: 991px){
+        .content h1 {
+            font-size: 40px;
+        }
+        .content h1::before {
+            font-size: 100px;
+        }
+    }        
 </style>
 <body>
-    <div class="box-page">
+    <div class="content">
         <h1>
           Você é um robô? <br> 
           <span class="language-text">Are you a robot?</span>
-        </h1>
+        </h1>        
+        <p>
+            Complete o desafio abaixo para confirmar a sua identidade <br>
+            <span class="language-text">Please fill in the challenge below to confirm your identity</span>
+        </p>
         <h2>::CAPTCHA_BOX::</h2>
     </div>
 </body>
