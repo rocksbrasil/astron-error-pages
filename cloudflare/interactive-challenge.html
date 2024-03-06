@@ -33,6 +33,8 @@
 
         .content {
             max-width: 500px;
+            max-height: 100vh;
+            overflow: auto;
         }
 
         .content h1 {
@@ -71,6 +73,83 @@
                 line-height: 26px;
             }      
         }
+
+        /** POP UP HELP */        
+        .content-footer {
+            display: inline-flex;
+            gap: 15px;
+        }
+        .pop-up-ajuda {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        input#ajuda, input#help {
+            display: none;
+        }
+        .pop-up-ajuda-content {
+            max-height: 100vh;
+            max-width: 500px;
+            overflow: auto;     
+            background: #292929;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            position: relative;
+        }
+        .pop-up-ajuda-content .titulo {
+            font-size: 18px;
+            font-weight: 800;
+            text-align: center;
+        }
+        .pop-up-ajuda-content .list {
+            padding-left: 10px;
+        }
+        .pop-up-ajuda-content figure {
+            fill: white;
+        }
+        .pop-up-ajuda-content .pop-up-ajuda-close {
+            cursor: pointer;
+            position: absolute;
+            right: -25px;
+            top: 0;
+        }
+        .pop-up-ajuda-content .pop-up-ajuda-close svg {
+            width: 30px;
+            height: 30px;
+        }
+        .pop-up-ajuda-content .pop-up-ajuda-icon, .pop-up-ajuda-content .info {
+            text-align: center;
+        }
+        .pop-up-ajuda-content .info {
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        .pop-up-ajuda-content a, .pop-up-ajuda-label {
+            transition: all .3s ease-in-out;
+        }
+        .pop-up-ajuda-content a:hover,.pop-up-ajuda-label:hover {
+            color: #da1a47;
+            opacity: 1;
+        }
+        .content-footer label {
+            cursor: pointer;
+        }
+        input#ajuda:checked ~ .pop-up-ajuda.portugues,
+        input#help:checked ~ .pop-up-ajuda.ingles {
+            display: flex;
+        }
+        .pop-up-ajuda-label {
+            font-size: 14px;
+            opacity: 0.4;
+            border-bottom: 1px solid;
+        }
     </style>
     <body>
         <div class="content">
@@ -84,6 +163,45 @@
                 <span class="language-text">Please fill in the challenge below to confirm your identity</span>
             </p>
             <h2>::CAPTCHA_BOX::</h2>
+
+            <div class="content-footer">
+                <label for="ajuda" class="pop-up-ajuda-label">Você precisa de ajuda?</label>
+                <label for="help" class="pop-up-ajuda-label">Do you need help?</label>
+                <!-- pop-up ajuda português -->
+                <input type="checkbox" id="ajuda">
+                <label for="ajuda" class="pop-up-ajuda portugues">
+                    <div class="pop-up-ajuda-content">
+                        <!-- icone close pop up -->
+                        <figure class="pop-up-ajuda-close"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"/></svg></figure>
+                        <!-- icone help -->                        
+                        <figure class="pop-up-ajuda-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 18h-2v-8h2v8zm-1-12.25c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25z"/></svg></figure>
+                        <!-- conteúdo pop-up -->
+                        <p class="titulo">Caso esteja enfrentando problemas, em prosseguir por esta verificação, peçamos que realize alguns testes, como:</p>
+                        <p class="list">1. Desative quaisquer extensões de navegador que possam interferir na validação, tais como, bloqueadores de anúncios e extensões de privacidade.</p>
+                        <p class="list">2. Não utilizar conexões Proxy, VPN ou redirecionadores de conexão em seu dispositivo.</p>
+                        <p class="list">3. Verifique se a versão utilizada do seu navegador, está atualizada. </p>
+                        <p class="list">4. E por fim, tente acessar o site utilizando um dispositivo ou rede diferente para ver se o problema persiste</p>
+                        <p class="info">Se ainda encontrar dificuldades, <a href="">clique aqui</a> e acesse nossa página de ajuda para auxiliar no teste de verificação</p>
+                    </div>
+                </label>                
+                <!-- pop-up ajuda inglês -->
+                <input type="checkbox" id="help">
+                <label for="help" class="pop-up-ajuda ingles">
+                    <div class="pop-up-ajuda-content">
+                        <!-- icone close pop up -->
+                        <figure class="pop-up-ajuda-close"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"/></svg></figure>
+                        <!-- icone help -->                        
+                        <figure class="pop-up-ajuda-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 18h-2v-8h2v8zm-1-12.25c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25z"/></svg></figure>
+                        <!-- conteúdo pop-up -->
+                        <p class="titulo">If you are experiencing difficulties proceeding with this verification, we ask that you perform some tests, such as:</p>
+                        <p class="list">1. Disable any browser extensions that may interfere with validation, such as ad blockers and privacy extensions.</p>
+                        <p class="list">2. Do not use Proxy connections, VPNs, or connection redirectors on your device.</p>
+                        <p class="list">3. Ensure that the version of your browser being used is up to date.</p>
+                        <p class="list">4. Finally, try accessing the site using a different device or network to see if the problem persists.</p>
+                        <p class="info">If you still encounter difficulties, <a href=""> click here </a>to access our help page for assistance with the verification test.</p>
+                    </div>
+                </label>
+            </div>
         </div>
     </body>
 </html>
