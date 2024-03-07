@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,10 +55,12 @@
         }
         h1 {
             font-size: 36px;
+            line-height: 40px;
             font-weight: 900;
         }
         h2 {
-            font-size: 31px;
+            font-size: 30px;
+            line-height: 34px;
             font-weight: 900;
             margin-bottom: 5px;
         }
@@ -66,6 +68,7 @@
             margin-bottom: 5px;
             font-weight: 900;
             font-size: 24px;
+            line-height: 30px;
         }
         ul:not(.introducao-list) {
             list-style: none;
@@ -84,6 +87,34 @@
         footer svg {
             width: 30px;
             height: auto;
+        }
+
+        @media screen and (max-width: 991px) {
+            .page {
+                width: 100%;
+                margin-left: 0;
+                left: 0;
+                padding-inline: 15px;
+            }
+            .solucoes {
+                padding-left: 20px;
+            }
+            h1 {
+                margin-top: 0;
+                font-size: 26px;
+                line-height: 40px;
+            }
+            h2 {
+                font-size: 22px;
+                line-height: 26px;
+            }
+            h3 {
+                font-size: 20px;
+                line-height: 22px;
+            }
+            ul:not(.introducao-list) {
+                padding-left: 20px;
+            }
         }
     </style>
     <body>
@@ -259,7 +290,7 @@
 
                 <!-- Chame o suporte -->
                 <h3>Chame o suporte</h3>
-                <p>Caso o erro persista, ou se você está constantemente tendo que confirmar o loop do captcha da cloudflare em nosso site, entre em contato com nosso suporte.</p>
+                <p>Caso o erro persista, ou se você está constantemente tendo que confirmar o captcha da cloudflare em nosso site, entre em contato com nosso suporte.</p>
             </article>
         </main>
 
