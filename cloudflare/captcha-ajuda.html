@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajuda Captcha Cloudflare - Central de Ajuda - Astron Members</title>
+    </head>
+    <style>
+        * {
+            font-family: 'Nunito Sans';
+            box-sizing: border-box;
+            color: white;
+        }
+        body, html, p {
+            font-size: 18px;
+            line-height: 150%;
+            margin: 0;
+            color: white;
+        }
+        body {
+            background: #141414;
+        }
+        img {
+            max-width: 100%;
+            max-height: 450px;
+            display: flex;
+            padding: 20px 0 40px;
+        }
+        .page {
+            position: relative;
+            width: 1200px;
+            margin-left: 50%;
+            left: -600px;
+            z-index: 5;
+        }
+        header {
+            background: #1f1f1f;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding-block: 20px;
+        }
+        header .logo svg {
+            width: 30px;
+            height: auto;
+        }
+        header .logo p {
+            font-size: 16px;
+        }
+
+        article {
+            padding-top: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 900;
+        }
+        h2 {
+            font-size: 31px;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        h3 {
+            margin-bottom: 5px;
+            font-weight: 900;
+            font-size: 24px;
+        }
+        ul:not(.introducao-list) {
+            list-style: none;
+        }
+        .introducao-list li {
+            padding-bottom: 15px;
+        }
+        .solucoes {
+            padding-left: 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 0 10px;
+        }
+        footer svg {
+            width: 30px;
+            height: auto;
+        }
+    </style>
+    <body>
+        <header>
+            <div class="logo page">
+                <svg width="225" height="144" viewBox="0 0 225 144" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M107.033 120.306C99.9211 125.314 106.299 120.62 94.5331 128.959C104 128.865 97.7365 128.959 110.765 128.959C115.117 129.126 119.476 128.939 123.799 128.399C123.799 127.38 117.374 114.113 116.849 114.113C116.584 114.115 111.879 117.171 107.033 120.306Z" fill="#DE4141"/><path d="M33.9911 70.6931C15.9252 109.657 0.811295 142.221 0.378052 143.15C-0.576551 145.191 -1.70555 145.655 24.0026 132.851C34.2518 127.749 53.2722 118.379 66.1282 111.971C79.0704 105.662 114.776 87.9436 145.603 72.6339C176.429 57.3241 207.011 42.2044 213.526 38.9568C220.135 35.7091 225.426 32.9257 225.251 32.8344C225.077 32.6479 201.278 41.7402 182.518 49.1621C180.174 50.0942 169.576 54.2647 159.066 58.2543C142.476 64.7478 109.731 77.4568 106.866 78.5754C106.258 78.7619 102.697 72.5443 98.7022 64.2891C78.4627 22.9143 67.2517 0 67.0846 0C66.9965 0 52.0569 31.8221 33.9911 70.6931ZM75.6834 64.0132C81.2421 75.8889 84.0215 82.8428 83.5001 83.4021C82.2848 84.6083 46.4174 99.3588 45.8906 98.8033C45.3692 98.3391 65.8675 45.4595 66.5632 45.4595C66.8239 45.4577 70.9067 53.8079 75.6834 64.0132Z" fill="#DE4141"/></svg>
+                <p>ASTRON <b>MEMBERS</b> | Documentos </p>
+            </div>
+        </header>
+
+        <main class="page">
+            <article>
+                <!-- introdução -->
+                <h1>Como corrigir o loop de verificação do captcha da Cloudflare</h1>
+                <p>Há várias razões pelas quais você pode ficar preso no loop de captcha da cloudflare e permanecer no desafio de segurança. Algumas das razões incluem:</p>
+                <ul class="introducao-list">
+                    <li>
+                        <p><b>Verificações de segurança:</b> Sites habilitados pelo Cloudflare podem solicitar verificação humana, especialmente se você for novo no site. Mas também pode identificá-lo erroneamente como um bot malicioso, desencadeando a continuação da solicitação de verificação.</p>
+                    </li>
+                    <li>
+                        <p><b>Conexão ruim:</b> Se você estiver em uma área com má conexão de rede ou Wi-Fi instável, o loop de verificação humana pode ser instável.</p>
+                    </li>
+                    <li>
+                        <p><b>Informações incorretas:</b> Se as informações que você inserir ao usar um site estiverem incorretas, o site não conseguirá verificar sua identidade. Isso pode fazer com que você fique preso no loop.</p>
+                    </li>
+                    <li>
+                        <p><b>Problemas no servidor:</b> Um site pode ter dificuldades em concluir o loop de verificação humana do Cloudflare se houver uma carga de tráfego alta no servidor.</p>
+                    </li>
+                </ul>
+
+                <!-- resolução do problema -->
+                <h2>Resolvendo o Loop de verificação do captcha do Cloudflare</h2>
+                <p>Confira algumas soluções que podem te ajudar a passar pela verificação de captcha da cloudflare </p>
+
+                <div class="solucoes">
+                    <!-- mudança de navegador -->
+                    <h3>Mudar seu Navegador</h3>
+                    <p>Usar um navegador diferente ou tentar acessar o site no modo de navegação privada pode fazer com que o Cloudflare pense que você é um usuário diferente. Isso pode ajudá-lo a acessar o site facilmente.</p>
+                    
+                    <!-- desabilitar VPN -->
+                    <h3>Desabilitar VPN ou Proxy:</h3>
+                    <p>O uso de VPN e proxies pode fazer com que o Cloudflare o identifique desnecessariamente como uma ameaça. Você pode tentar desabilitá-los e acessar o serviço diretamente da internet para ver se conseguirá contornar o loop de captcha humano. Você pode desativar sua VPN ou proxy seguindo estes passos:</p>
+                    <ul>
+                        <li>
+                            1. Nas configurações do seu dispositivo, abra a opção "Rede e Internet"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/configuracao-vpn-proxy-etapa-1.png" alt="Etapa 1 para desabilitar o proxy">
+                        </li>
+                        <li>
+                            2. No menu à esquerda, clique na opção "Proxy"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/configuracao-vpn-proxy-etapa-2.png" alt="Etapa 2 para desabilitar o proxy">
+                        </li>
+                        <li>
+                            3. Desabilite a opção "Detectar configurações automaticamente"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/configuracao-vpn-proxy-etapa-3.png" alt="Etapa 3 para desabilitar o proxy">
+                        </li>
+                    </ul>
+    
+                    <!-- Configurações DNS -->
+                    <h3>Verificar as configurações de DNS do seu navegador</h3>
+                    <p>Se suas configurações de DNS não estiverem corretamente configuradas, pode bloquear o acesso do seu navegador ao site. Verifique se tudo está configurado corretamente antes de tentar o desafio de segurança novamente. Você também pode tentar ajustar algumas das configurações para ver se haverá uma mudança. Siga estas etapas para executar esta tarefa:</p>
+                    <ul>
+                        <li>
+                            1. Pressione as teclas "Windows + R" para acessar a caixa de diálogo Executar
+                            <!-- imagem das teclas -->
+                        </li>
+                        <li>
+                            2. Digite "cmd" e pressione "Enter" para abrir o prompt de comando
+                            <div class="imagem">
+                                <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/configuracao-dns-etapa-1.png" alt="Etapa 1 para configurar o DNS">
+                                <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/configuracao-dns-etapa-1-1.png" alt="Etapa 1 para configurar o DNS">
+                            </div>
+                        </li>
+                        <li>
+                            3. Digite "ipconfig/flushdns" e pressione "Enter"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/configuracao-dns-etapa-2.png" alt="Etapa 1 para configurar o DNS">
+                        </li>
+                        <li>
+                            4. Feche o prompt de comando e tente acessar o site novamente
+                        </li>
+                    </ul>
+    
+                    <!-- alterar DNS -->
+                    <p>Como alternativa, você pode usar o seguinte método para alterar o seu DNS:</p>
+                    <ul>
+                        <li>
+                            1. Abra seu navegador e clique nos três pontos à direita da barra de URL
+                            <!-- imagem da localização dos três pontos - BATER PRINT -->
+                        </li>
+                        <li>
+                            2. Clique em "Configurações" no menu
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/alterar-dns-etapa-1.png" alt="Etapa 1 para alterar o DNS">
+                        </li>
+                        <li>
+                            3. Selecione "Privacidade e segurança"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/alterar-dns-etapa-2.png" alt="Etapa 2 para alterar o DNS">
+                        </li>
+                        <li>
+                            4. Escolha "Segurança" na janela aberta à direita da tela
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/alterar-dns-etapa-3.png" alt="Etapa 3 para alterar o DNS">
+                        </li>
+                        <li>
+                            5. Localize a seção "Selecionar provedor de DNS" na guia "Avançado"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/alterar-dns-etapa-4.png" alt="Etapa 4 para alterar o DNS">
+                        </li>
+                        <li>
+                            6. Clique no menu suspenso e selecione a opção "Google (public DNS)"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/alterar-dns-etapa-5.png" alt="Etapa 5 para alterar o DNS">
+                        </li>
+                        <li>
+                            7. Reinicie seu navegador para verificar se o problema foi resolvido
+                        </li>
+                    </ul>
+                    <p>O DNS público do Google é a melhor escolha de DNS a usar devido à sua reputação, sempre selecione DNSs que tenham uma ótima reputação.</p>
+    
+                    <!-- usar uma rede diferente -->    
+                    <h3>Usar uma rede diferente</h3>
+                    <p>Às vezes, o problema pode estar vindo da sua rede. Mudá-la pode ajudá-lo a resolver o problema ou confirmar onde está o problema.</p>
+    
+                    <!-- desabilitar extensões -->
+                    <h3>Desabilitar extensões do navegador</h3>
+                    <p>Algumas extensões que você adiciona ao seu navegador podem disparar um alerta de segurança no Cloudflare. Desativá-las pode ajudar a resolver o desafio de segurança.</p>
+                    <ul>
+                        <li>
+                            1. Abra seu navegador, clique nos três pontos localizados no canto superior direito do seu navegador
+                        </li>
+                        <li>
+                            2. No menu suspenso, clique na opção "Extensões" e depois em "Gerenciar extensões"                            
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/desativar-extensoes-etapa-1.png" alt="Etapa 1 desativar as extensões do Google">
+                        </li>
+                        <li>
+                            3. Desative todos as extensões e tente acessar o site novamente                          
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/desativar-extensoes-etapa-2.png" alt="Etapa 2 desativar as extensões do Google">
+                        </li>
+                    </ul>
+    
+                    <!-- limpar o cache -->
+                    <h3>Limpar o cache do seu navegador</h3>
+                    <p>Os dados em cache no seu dispositivo podem fazer com que você fique preso no loop de verificação humana. Você pode limpá-los seguindo as etapas listadas abaixo:</p>
+                    <ul>
+                        <li>
+                            1. Abra seu navegador, clique nos três pontinhos localizados no canto superior direito do seu navegador
+                        </li>
+                        <li>
+                            2. No menu, clique em "Limpar dados de navegação"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/limpar-cache-etapa-1.png" alt="Etapa 1 para Limpar o cache">
+                        </li>
+                        <li>
+                            3. Na caixa que abrir, marque a opção "Cookies e outros dados do site", depois clique em no botão "Remover dados"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/limpar-cache-etapa-2.png" alt="Etapa 2 para Limpar o cache">
+                        </li>
+                        <li>
+                            4. Tente acessar o site novamente
+                        </li>
+                    </ul>
+    
+                    <!-- limpar dados do site no navegador -->
+                    <p>Se limpar o cache do navegador não funcionar, a próxima melhor opção que você tem é limpar os dados do site do seu navegador. Veja como você pode fazer isso:</p>
+                    <ul>
+                        <li>
+                            1. Abra o seu navegador e clique no ícone localizado na barra de URL do site
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/limpar-dados-site-navegador-etapa-1.png" alt="Etapa 1 para Limpar o dados do site no navegador">
+                        </li>
+                        <li>
+                            2. No menu suspenso, clique na opção "Configurações do site"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/limpar-dados-site-navegador-etapa-2.png" alt="Etapa 2 para Limpar o dados do site no navegador">
+                        </li>
+                        <li>
+                            3. Na página de configurações que abrir, clicar no botão "Excluir dados"
+                            <img src="https://epages.astronmembers.com.br/cloudflare/imagens/imagens-ajuda/limpar-dados-site-navegador-etapa-3.png" alt="Etapa 3 para Limpar o dados do site no navegador">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Chame o suporte -->
+                <h3>Chame o suporte</h3>
+                <p>Caso o erro persista, ou se você está constantemente tendo que confirmar o loop do captcha da cloudflare em nosso site, entre em contato com nosso suporte.</p>
+            </article>
+        </main>
+
+        <footer>            
+            <svg width="225" height="144" viewBox="0 0 225 144" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M107.033 120.306C99.9211 125.314 106.299 120.62 94.5331 128.959C104 128.865 97.7365 128.959 110.765 128.959C115.117 129.126 119.476 128.939 123.799 128.399C123.799 127.38 117.374 114.113 116.849 114.113C116.584 114.115 111.879 117.171 107.033 120.306Z" fill="#DE4141"/><path d="M33.9911 70.6931C15.9252 109.657 0.811295 142.221 0.378052 143.15C-0.576551 145.191 -1.70555 145.655 24.0026 132.851C34.2518 127.749 53.2722 118.379 66.1282 111.971C79.0704 105.662 114.776 87.9436 145.603 72.6339C176.429 57.3241 207.011 42.2044 213.526 38.9568C220.135 35.7091 225.426 32.9257 225.251 32.8344C225.077 32.6479 201.278 41.7402 182.518 49.1621C180.174 50.0942 169.576 54.2647 159.066 58.2543C142.476 64.7478 109.731 77.4568 106.866 78.5754C106.258 78.7619 102.697 72.5443 98.7022 64.2891C78.4627 22.9143 67.2517 0 67.0846 0C66.9965 0 52.0569 31.8221 33.9911 70.6931ZM75.6834 64.0132C81.2421 75.8889 84.0215 82.8428 83.5001 83.4021C82.2848 84.6083 46.4174 99.3588 45.8906 98.8033C45.3692 98.3391 65.8675 45.4595 66.5632 45.4595C66.8239 45.4577 70.9067 53.8079 75.6834 64.0132Z" fill="#DE4141"/></svg>
+        </footer>
+    </body>
+</html>
